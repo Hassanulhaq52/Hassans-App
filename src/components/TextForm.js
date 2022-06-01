@@ -10,6 +10,14 @@ setText(newText);
 
 } 
 
+const handleLoClick = () => {
+
+  // console.log('UpperCase was Clicked' + text);
+  let newText = text.toLowerCase();
+  setText(newText);
+  
+  } 
+
 const handleOnChange = (event) => {
 
     // console.log('On Change');
@@ -17,11 +25,11 @@ const handleOnChange = (event) => {
     
     } 
 
-    const [text, setText] = useState('Enter Text Here') 
+    const [text, setText] = useState('') 
 
   return (
-
-    <div>
+<>
+    <div className='container'>
 
 <h1>{props.heading}</h1>
 
@@ -31,9 +39,21 @@ const handleOnChange = (event) => {
 
 </div>
 
-<button className="btn btn-primary" onClick={handleUpClick}> Convert to UpperCase</button>
-
+<button className="btn btn-primary mx-1" onClick={handleUpClick}> Convert to UpperCase</button>
+<button className="btn btn-primary mx-1" onClick={handleLoClick}> Convert to LowerCase</button>
     </div>
 
+<div className='container my-3'>
+
+<h2>Your text Summary</h2>
+
+<p>{text.split(' ').length} words and {text.length} characters</p>
+<p>{ 0.008 * text.split(' ').length} Minutes to read </p>
+<h2>Preview</h2>
+<p>{text}</p>
+
+</div>
+
+    </>
   )
 }
