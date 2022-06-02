@@ -18,6 +18,13 @@ const handleLoClick = () => {
   
   } 
 
+  const handleClear = () => {
+
+    let newText = '';
+    setText(newText);
+    
+    } 
+
 const handleOnChange = (event) => {
 
     // console.log('On Change');
@@ -41,6 +48,8 @@ const handleOnChange = (event) => {
 
 <button className="btn btn-primary mx-1" onClick={handleUpClick}> Convert to UpperCase</button>
 <button className="btn btn-primary mx-1" onClick={handleLoClick}> Convert to LowerCase</button>
+<button className="btn btn-primary mx-1" onClick={handleClear}> Clear Text</button>    
+    
     </div>
 
 <div className='container my-3'>
