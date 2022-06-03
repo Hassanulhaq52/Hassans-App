@@ -4,6 +4,12 @@ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
 
@@ -52,22 +58,36 @@ else {
   return (
     <>
       
-    
+ <Router>  
 <Navbar title = 'Hassans App' mode = {mode} toggleMode = {toggleMode}  />
 
 <Alert alert = {alert}/>
 
 <div className="container my-3">
-  
-  <TextForm heading = 'Enter the Text to Analyze Below' showAlert = {showAlert} mode = {mode} />
 
-{/* <About/> */}
+{/* <Routes> */}
+
+<Routes>
+        <Route path="/about" element={<About />} />
+        <Route path='/Home' element={<TextForm  />} />
+      
+      </Routes>
+
+      
+          {/* <Route path="/about" />
+            <About />
+          
+       
+          <Route path="/" />
+
+             <TextForm heading = 'Enter the Text to Analyze Below' showAlert = {showAlert} mode = {mode} />
+
+          
+        </Routes> */}
+  
 
 </div>
-
-
-{/* <Navbar /> */}
-
+</Router> 
     </>
   );
 }
