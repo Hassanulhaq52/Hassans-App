@@ -34,6 +34,7 @@ if (mode === 'light') {
   setMode ('dark');
   document.body.style.backgroundColor = '#042743';
   showAlert('Dark Mode has been Enabled', 'Success');
+  document.title = 'Hassans App - dark Mode';
   
 } 
 
@@ -42,6 +43,7 @@ else {
  setMode ('light');
  document.body.style.backgroundColor = 'white';
  showAlert('Light Mode has been Enabled', 'Success');
+ document.title = 'Hassans App - Light Mode';
 
 }
 
