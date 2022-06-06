@@ -59,35 +59,38 @@ else {
     <>
       
  <Router>  
+
 <Navbar title = 'Hassans App' mode = {mode} toggleMode = {toggleMode}  />
 
 <Alert alert = {alert}/>
 
 <div className="container my-3">
 
-{/* <Routes> */}
+<Routes>
 
 <Routes>
         <Route path="/about" element={<About />} />
-        <Route path='/Home' element={<TextForm  />} />
+        <Route path='/Home' element={ <TextForm heading = 'Enter the Text to Analyze Below' showAlert = {showAlert} mode = {mode} />} />
       
       </Routes>
 
       
-          {/* <Route path="/about" />
+            <Route path="/about" />
             <About />
           
        
-          <Route path="/" />
+          <Route path="/" /> 
 
              <TextForm heading = 'Enter the Text to Analyze Below' showAlert = {showAlert} mode = {mode} />
 
           
-        </Routes> */}
+        </Routes> 
   
 
 </div>
+
 </Router> 
+
     </>
   );
 }
