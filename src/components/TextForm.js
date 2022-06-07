@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
   const handleUpClick = () => {
-    // console.log('UpperCase was Clicked' + text);
+  
     let newText = text.toUpperCase();
     setText(newText);
     props.showAlert('Converted to Uppercase', 'Success');
   };
 
   const handleLoClick = () => {
-    // console.log('UpperCase was Clicked' + text);
+
     let newText = text.toLowerCase();
     setText(newText);
     props.showAlert('Converted to Lowercase', 'Success');
@@ -22,16 +22,13 @@ export default function TextForm(props) {
   };
 
   const handleOnChange = (event) => {
-    // console.log('On Change');
+   
     setText(event.target.value);
   };
 
   const handleCopy = () => {
-    console.log("I am Copy");
-    var text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
+ 
+    navigator.clipboard.writeText(text);
     props.showAlert('Copied to ClipBoard', 'Success');
   };
 
@@ -87,7 +84,7 @@ export default function TextForm(props) {
         <p>
           {text.split(" ").filter((element) => {return element.length !==0 }).length} words and {text.length} characters.
         </p>
-        <p>{0.008 * text.split(" ").filter((element) => {return element.length !==0 }).length} Minutes to read </p>
+        <p> {0.008 * text.split(" ").filter((element) => {return element.length !==0 }).length} Minutes to read </p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text: 'Nothing to Preview!'}</p>
       </div>
