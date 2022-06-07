@@ -39,7 +39,7 @@ if (mode === 'light') {
   setMode ('dark');
   document.body.style.backgroundColor = '#042743';
   showAlert('Dark Mode has been Enabled', 'Success');
-  document.title = 'Hassans App - dark Mode';
+  // document.title = 'Hassans App - dark Mode';
   
 } 
 
@@ -48,7 +48,7 @@ else {
  setMode ('light');
  document.body.style.backgroundColor = 'white';
  showAlert('Light Mode has been Enabled', 'Success');
- document.title = 'Hassans App - Light Mode';
+//  document.title = 'Hassans App - Light Mode';
 
 }
 
@@ -69,8 +69,8 @@ else {
 
 <Routes>
   
-        <Route path="/about" element={<About />} />
-        <Route path='/Home' element={ <TextForm heading = 'Enter the Text to Analyze Below' showAlert = {showAlert} mode = {mode} />} />
+        <Route path="/about" element={<About mode = {mode} />} />
+        <Route path='/Home' element={ <TextForm heading = 'Try Hassans App - Word Counter, Character Counter, Remove Extra Spaces' showAlert = {showAlert} mode = {mode} />} />
       
       </Routes>
 
