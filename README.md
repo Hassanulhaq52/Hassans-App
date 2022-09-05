@@ -1,5 +1,7 @@
-# Getting Started with Create React App
+# Getting Started with Create React App.
 
+# Hassans App is a proper TextUtils Rext App.In This App You can Count Words, Copy Text, Convert the text to UpperCase, Convert the text to LowerCase, Clear the text, Remove Extra Spaces, Enable dark Mode and much more Things.
+ 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
